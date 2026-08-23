@@ -7,7 +7,6 @@ class ClaudePacer < Formula
 
   depends_on "node"
   depends_on :macos
-  depends_on xcode: ["14.0", :build]
 
   def install
     app = prefix/"Claude Pacer.app"
