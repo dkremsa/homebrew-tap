@@ -1,8 +1,8 @@
 class Pacer < Formula
   desc "Menu-bar pace for AI coding subscriptions: will they last until their reset"
   homepage "https://github.com/dkremsa/claude-pacer"
-  url "https://github.com/dkremsa/claude-pacer/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "381e3bbce5fa7dfecd69a2133fb8c54ee6f1f45e1430ed372289e7926c985ff9"
+  url "https://github.com/dkremsa/claude-pacer/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "fc0b50673e0f2dd7ba888bc240193794179b654882d524627bd99fe1e6402ccd"
   license "MIT"
 
   depends_on "node"
