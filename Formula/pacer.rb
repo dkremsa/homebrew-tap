@@ -1,8 +1,8 @@
 class Pacer < Formula
   desc "Menu-bar pace for AI coding subscriptions: will they last until their reset"
   homepage "https://github.com/dkremsa/claude-pacer"
-  url "https://github.com/dkremsa/claude-pacer/archive/refs/tags/v2.1.0.tar.gz"
-  sha256 "fc0b50673e0f2dd7ba888bc240193794179b654882d524627bd99fe1e6402ccd"
+  url "https://github.com/dkremsa/claude-pacer/archive/refs/tags/v2.2.0.tar.gz"
+  sha256 "3bb60e1cec09a7c5483504a879c2358dd9bb8651a6ca12f8f174f3a3ed285d9b"
   license "MIT"
 
   depends_on "node"
@@ -40,6 +40,9 @@ class Pacer < Formula
         <key>LSMinimumSystemVersion</key><string>13.0</string>
       </dict></plist>
     PLIST
+    # Ad-hoc signed so the bundle carries its id: the reminder notifications go through the notification centre,
+    # which keys permission on it. TWIN: the codesign line in build.sh.
+    system "codesign", "--force", "--sign", "-", app
     libexec.install "pacer.mjs"
     (bin/"pacer").write <<~SH
       #!/bin/sh
